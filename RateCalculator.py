@@ -21,8 +21,8 @@ cmd_list = ['!c', '!miss', '!list', '!total', '!clear_all',\
             '!graph', '!graphall', '!restore', '!teamgraph']
 ERR_CODE_NOT_INT = 11111111111
 ERR_CODE_NAN     = 22222222222
-manager = [xxxxxxxxxxxxxxxxxx] # permission for clear_all
-sp = xxxxxxxxxxxxxxxxxx
+manager = [223405150507630592] # permission for clear_all
+sp = 223405150507630592
 teamrate = []
 
 @client.event
@@ -130,9 +130,6 @@ async def on_message(message):
                 return -1
             Calc_rate(message, arg)
             TeamRate(arg)
-
-
-
 # functions
 def CommandExtract(message):
     return message.split(' ')[0]
@@ -141,7 +138,6 @@ def ArgExtract(message):
     message = message.replace('–', '-')
     message = message.replace('+', '')
     tmp = message.split(' ')
-    #  print(tmp)
     if len(tmp) >= 2: # If !command integer
         if is_digit2(tmp[1]) == True:
             return tmp[1]
@@ -149,14 +145,12 @@ def ArgExtract(message):
     else: return ERR_CODE_NAN
 
 def is_digit2(a_1): # 引数はString
-    #  print (type(a_1[0]))
     if a_1[0]=='-' and a_1[1:].isdigit() or a_1.isdigit():
         return True
     else:
         return False
 
 def Calc_rate(message, arg):
-    print (rate_dic)
     if not str(message.author.id) in rate_dic.keys():
         rate_dic[str(message.author.id)] = [int(arg)]
     else:
@@ -247,4 +241,4 @@ def TeamGraph():
     plt.close()
 
 # main
-client.run('bot_token')
+client.run('Mzg2ODIyOTc5MjYwMTIxMDk4.DQVgiA.nB2-GlDmTbR4ZC59APunsX62wzM')
