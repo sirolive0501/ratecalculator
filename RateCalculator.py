@@ -21,8 +21,8 @@ cmd_list = ['!c', '!miss', '!list', '!total', '!clear_all',\
             '!graph', '!graphall', '!restore', '!teamgraph']
 ERR_CODE_NOT_INT = 11111111111
 ERR_CODE_NAN     = 22222222222
-manager = [223405150507630592] # permission for clear_all
-sp = 223405150507630592
+manager = [xxxxxxxxxxxxxxxxxx] # permission for clear_all
+sp = xxxxxxxxxxxxxxxxxx
 teamrate = []
 
 @client.event
