@@ -49,6 +49,7 @@ async def on_message(message):
         try:
             cmd[0] != '!'
         except: return -1
+        if cmd[0] != '!': return -1
         if cmd == cmd_list[0]: # calculate !c
             if arg == ERR_CODE_NOT_INT:
                 await client.send_message(message.channel,\
